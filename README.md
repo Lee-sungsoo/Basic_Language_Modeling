@@ -49,9 +49,11 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
 
 위 학습과정을 바탕으로 RNN, LSTM 모델의 각 Best model을 대상으로 generation.py를 통하여 문장을 생성하는 실험을 진행 하였습니다. 이 과정에서 temperature라는 변수를 도입하여 temperature 값에 따른 생성 결과를 비교하였습니다.
 
-<p style="text-align: center; font-size: 2em;">
-  $y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$
-</p>
+<center>
+  <h1 style="font-size: 2em;">
+    $$y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$$
+  </h1>
+</center>
 
 여기서 $T$는 temperature로, 확률분포의 형태를 조절합니다.
 
