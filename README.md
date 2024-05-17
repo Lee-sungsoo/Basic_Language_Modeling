@@ -53,10 +53,8 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
   <h1 style="font-size: 1.5em;">
     $$y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$$
   </h1>
+  여기서 $T$는 temperature로, 확률분포의 형태를 조절합니다.
 </center>
-여기서 T는 temperature로, 확률분포의 형태를 조절합니다.
-
-여기서 $T$는 temperature로, 확률분포의 형태를 조절합니다.
 
 $T < 1$이면 높은 확률을 가진 후보가 더 강조되어 선택됩니다.   
 $T > 1$이면 확률분포가 평평해져서 다양한 후보가 선택될 수 있습니다.   
