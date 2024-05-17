@@ -24,7 +24,7 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
 - number of layers: 3
 
 
-### Opimization
+### Optimization
 초기에 모델 구조를 은닉 노드 수 128, 레이어 수 5개로 설계하고 Adam optimizer를 사용하여 학습을 진행했습니다. 하지만 이 경우 학습 초기부터 검증 데이터셋에 대한 손실이 높아지는 과적합(overfitting) 현상이 관찰되었습니다.
 이를 방지하고 모델의 일반화 성능을 높이기 위해 다음과 같은 조치를 취했습니다.
 
@@ -49,7 +49,9 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
 
 위 학습과정을 바탕으로 RNN, LSTM 모델의 각 Best model을 대상으로 generation.py를 통하여 문장을 생성하는 실험을 진행 하였습니다. 이 과정에서 temperature라는 변수를 도입하여 temperature 값에 따른 생성 결과를 비교하였습니다.
 
-$y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$
+<div style="text-align: center; font-size: 2em;">
+  $y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$
+</div>
 
 여기서 $T$는 temperature로, 확률분포의 형태를 조절합니다.
 
