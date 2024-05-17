@@ -38,8 +38,8 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
 ### 실험 결과
 1. Train loss and Validation loss plot   
 <p align="center">
-  <img src="train_loss_plot.png" alt="Training Loss Plot" width="400">
-  <img src="val_loss_plot.png" alt="Validation Loss Plot" width="400">
+  <img src="train_loss_plot.png" alt="Training Loss Plot" width="500">
+  <img src="val_loss_plot.png" alt="Validation Loss Plot" width="500">
 </p>   
 
 위 그림은 Vanilla RNN과 LSTM 모델의 Train loss 및 Validation loss를 epoch 별로 시각화한 결과입니다.   LSTM 모델이 Vanilla RNN 모델보다 전반적으로 낮은 손실값을 보이고 있으며, 검증 데이터셋에 대한 최종 손실값은 LSTM 모델이 1.92, Vanilla RNN 모델이 2.17로 LSTM 모델의 성능이 더 좋은 것을 확인할 수 있습니다.
@@ -49,7 +49,8 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
 
 위 학습과정을 바탕으로 RNN, LSTM 모델의 각 Best model을 대상으로 generation.py를 통하여 문장을 생성하는 실험을 진행 하였습니다. 이 과정에서 temperature라는 변수를 도입하여 temperature 값에 따른 생성 결과를 비교하였습니다.
 
-$y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$   
+$y_i = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$
+
 여기서 $T$는 temperature로, 확률분포의 형태를 조절합니다.
 
 $T < 1$이면 높은 확률을 가진 후보가 더 강조되어 선택됩니다.   
