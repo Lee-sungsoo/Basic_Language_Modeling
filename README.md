@@ -38,8 +38,8 @@ LSTM(Long Short-Term Memory)은 장기 의존성 문제를 해결하기 위해 �
 ### 실험 결과
 1. Train loss and Validation loss plot   
 <p align="center">
-  <img src="train_loss_plot.png" alt="Training Loss Plot" width="500">
-  <img src="val_loss_plot.png" alt="Validation Loss Plot" width="500">
+  <img src="train_loss_plot.png" alt="Training Loss Plot" width="800">
+  <img src="val_loss_plot.png" alt="Validation Loss Plot" width="800">
 </p>   
 
 위 그림은 Vanilla RNN과 LSTM 모델의 Train loss 및 Validation loss를 epoch 별로 시각화한 결과입니다.   LSTM 모델이 Vanilla RNN 모델보다 전반적으로 낮은 손실값을 보이고 있으며, 검증 데이터셋에 대한 최종 손실값은 LSTM 모델이 1.92, Vanilla RNN 모델이 2.17로 LSTM 모델의 성능이 더 좋은 것을 확인할 수 있습니다.
